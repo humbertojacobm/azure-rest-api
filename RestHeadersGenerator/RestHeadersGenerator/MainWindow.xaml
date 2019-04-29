@@ -1,0 +1,36 @@
+﻿<Window x:Class="RestHeadersGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestHeadersGenerator"
+        mc:Ignorable="d"
+        Title="Generador Headers" Height="450" Width="625">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="182*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Cuenta almacenamiento" VerticalAlignment="Top" Height="20"/>
+        <TextBox x:Name="txtStorageAccount" HorizontalAlignment="Left" Height="23" Margin="167,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="443"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,32,10,0" TextWrapping="Wrap" Text="blob.core.windows.net" VerticalAlignment="Top" Height="20" TextAlignment="Right"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,58.98,0,0" TextWrapping="Wrap" Text="Storage key:" VerticalAlignment="Top" Height="20"/>
+        <TextBox x:Name="txtStorageKey" HorizontalAlignment="Left" Height="23" Margin="167,56.98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="443"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,101.172,0,0" TextWrapping="Wrap" Text="Operation:" VerticalAlignment="Top" Height="20"/>
+        <ComboBox x:Name="cmbOperations" HorizontalAlignment="Left" Height="23.147" Margin="167,98.984,0,0" VerticalAlignment="Top" Width="443">
+            <ComboBox.Items>
+                <ComboBoxItem>GET</ComboBoxItem>
+                <ComboBoxItem>POST</ComboBoxItem>
+                <ComboBoxItem>PUT</ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+        <Button x:Name="btnGenerateHeaders" Content="Generar encabezados" HorizontalAlignment="Left" Height="38" Margin="10,136.435,0,0" VerticalAlignment="Top" Width="600" Click="btnGenerateHeaders_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10.988,0,0" TextWrapping="Wrap" Text="Authorization:" VerticalAlignment="Top" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="txtAuthorization" Height="67.746" Margin="110,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,89.521,0,0" TextWrapping="Wrap" Text="x-ms-date:" VerticalAlignment="Top" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="txtDate" Height="23" Margin="110,87.541,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,125.515,0,0" TextWrapping="Wrap" Text="x-ms-version:" VerticalAlignment="Top" Height="20" Grid.Row="1"/>
+        <TextBox x:Name="txtVersion" Height="23" Margin="110,122.515,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="1"/>
+
+    </Grid>
+</Window>
